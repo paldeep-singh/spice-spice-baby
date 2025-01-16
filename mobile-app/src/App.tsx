@@ -8,6 +8,7 @@ import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { BottomTabParamList } from "./navigation/types";
+import { StyleSheet, ViewStyle } from "react-native";
 
 const Tab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -20,22 +21,14 @@ export function App(): JSX.Element {
           <SafeAreaProvider>
             <Tab.Navigator
               screenOptions={{
-                headerStyle: { backgroundColor: theme.background.base },
-                headerTitleStyle: { color: theme.text.base },
-                tabBarStyle: {
-                  backgroundColor: theme.background.light,
-                  borderTopColor: theme.background.light,
-                },
+                headerStyle: styles.tabHeader,
+                headerTitleStyle: styles.tabHeaderTitle,
+                tabBarStyle: styles.tabBar,
                 tabBarActiveTintColor: theme.text.selected,
                 animation: "shift",
               }}
               screenLayout={({ children }) => (
-                <SafeAreaView
-                  style={{
-                    backgroundColor: theme.background.base,
-                    flex: 1,
-                  }}
-                >
+                <SafeAreaView style={styles.safeContainer}>
                   {children}
                 </SafeAreaView>
               )}
@@ -73,3 +66,18 @@ export function App(): JSX.Element {
     </GestureHandlerRootView>
   );
 }
+
+const styles = StyleSheet.create({
+  safeContainer: {
+    backgroundColor: theme.background.base,
+    flex: 1,
+  } satisfies ViewStyle,
+  tabHeader: {
+    backgroundColor: theme.background.base,
+  } satisfies ViewStyle,
+  tabHeaderTitle: { color: theme.text.base },
+  tabBar: {
+    backgroundColor: theme.background.light,
+    borderTopColor: theme.background.light,
+  },
+});
