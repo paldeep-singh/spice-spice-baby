@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TextStyle, ViewStyle } from "react-native";
 import { theme } from "../utils/theme";
 
 export function HomeScreen(): JSX.Element {
@@ -15,8 +15,8 @@ const styles = StyleSheet.create({
     backgroundColor: theme.background.base,
     alignItems: "center",
     justifyContent: "center",
-  },
+  } satisfies ViewStyle,
   text: {
     color: theme.text.base,
-  },
+  } satisfies TextStyle,
 });
