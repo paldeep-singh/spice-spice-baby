@@ -7,8 +7,9 @@ import { SearchScreen } from "./screens/Search";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import { BottomTabParamList } from "./navigation/types";
 
-const Tab = createBottomTabNavigator();
+const Tab = createBottomTabNavigator<BottomTabParamList>();
 
 export function App(): JSX.Element {
   return (
