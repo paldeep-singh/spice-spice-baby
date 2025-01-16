@@ -3,6 +3,8 @@ import { StyleSheet, Text, View } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import { theme, ThemeContext } from "./utils/theme";
+import { HomeScreen } from "./screens/Home";
+import { SearchScreen } from "./screens/Search";
 
 const Tab = createBottomTabNavigator();
 
@@ -21,25 +23,11 @@ export function App() {
             tabBarActiveTintColor: theme.text.selected,
           }}
         >
-          <Tab.Screen
-            name="Home"
-            component={() => (
-              <View style={styles.container}>
-                <Text style={styles.text}>Spice Spice Baby Home Screen</Text>
-                <StatusBar style="auto" />
-              </View>
-            )}
-          />
-          <Tab.Screen
-            name="Search"
-            component={() => (
-              <View style={styles.container}>
-                <Text style={styles.text}>Spice Spice Baby Search Screen</Text>
-                <StatusBar style="auto" />
-              </View>
-            )}
-          />
+          <Tab.Screen name="Home" component={HomeScreen} />
+          <Tab.Screen name="Search" component={SearchScreen} />
         </Tab.Navigator>
+
+        <StatusBar style="inverted" />
       </NavigationContainer>
     </ThemeContext.Provider>
   );
