@@ -21,5 +21,5 @@ export default tseslint.config(
       "react-hooks": eslintPluginReactHooks,
     },
     rules: { ...eslintPluginReactHooks.configs.recommended.rules },
-  }
+  },
 );
