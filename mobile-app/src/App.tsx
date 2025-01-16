@@ -9,7 +9,7 @@ import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 const Tab = createBottomTabNavigator();
 
-export function App() {
+export function App(): JSX.Element {
   return (
     <GestureHandlerRootView>
       <StatusBar style="inverted" />

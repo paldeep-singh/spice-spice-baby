@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet } from "react-native";
 import { theme } from "../utils/theme";
 
-export function SearchScreen() {
+export function SearchScreen(): JSX.Element {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Spice Spice Baby Search Screen</Text>
