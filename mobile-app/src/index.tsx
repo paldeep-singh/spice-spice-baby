@@ -1,5 +1,4 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import { theme, ThemeContext } from "./utils/theme";
@@ -32,15 +31,3 @@ export function App() {
     </ThemeContext.Provider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: theme.background.base,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  text: {
-    color: theme.text.base,
-  },
-});

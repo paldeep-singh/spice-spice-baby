@@ -1,5 +1,4 @@
 import { createContext, useContext } from "react";
-import { ColorValue } from "react-native";
 
 interface Theme {
   background: {

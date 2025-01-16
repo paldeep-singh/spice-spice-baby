@@ -8,6 +8,13 @@ export default tseslint.config(
   tseslint.configs.strict,
   tseslint.configs.stylistic,
   reactPlugin.configs.flat.recommended,
+  {
+    settings: {
+      react: {
+        version: "detect",
+      },
+    },
+  },
   reactPlugin.configs.flat["jsx-runtime"],
   {
     plugins: {
