@@ -12,6 +12,7 @@ const Tab = createBottomTabNavigator();
 export function App() {
   return (
     <GestureHandlerRootView>
+      <StatusBar style="inverted" />
       <ThemeContext.Provider value={theme}>
         <NavigationContainer>
           <SafeAreaProvider>
@@ -40,8 +41,6 @@ export function App() {
               <Tab.Screen name="Home" component={HomeScreen} />
               <Tab.Screen name="Search" component={SearchScreen} />
             </Tab.Navigator>
-
-            <StatusBar style="inverted" />
           </SafeAreaProvider>
         </NavigationContainer>
       </ThemeContext.Provider>
