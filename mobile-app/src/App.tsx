@@ -6,6 +6,7 @@ import { HomeScreen } from "./screens/Home";
 import { SearchScreen } from "./screens/Search";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
+import Ionicons from "@expo/vector-icons/Ionicons";
 
 const Tab = createBottomTabNavigator();
 
@@ -38,8 +39,32 @@ export function App(): JSX.Element {
                 </SafeAreaView>
               )}
             >
-              <Tab.Screen name="Home" component={HomeScreen} />
-              <Tab.Screen name="Search" component={SearchScreen} />
+              <Tab.Screen
+                name="Home"
+                component={HomeScreen}
+                options={{
+                  tabBarIcon: ({ focused }) => (
+                    <Ionicons
+                      name={focused ? "home" : "home-outline"}
+                      color={focused ? theme.text.selected : theme.text.base}
+                      size={16}
+                    />
+                  ),
+                }}
+              />
+              <Tab.Screen
+                name="Search"
+                component={SearchScreen}
+                options={{
+                  tabBarIcon: ({ focused }) => (
+                    <Ionicons
+                      name={focused ? "search" : "search-outline"}
+                      color={focused ? theme.text.selected : theme.text.base}
+                      size={16}
+                    />
+                  ),
+                }}
+              />
             </Tab.Navigator>
           </SafeAreaProvider>
         </NavigationContainer>
