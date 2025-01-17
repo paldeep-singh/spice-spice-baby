@@ -9,6 +9,7 @@ interface Theme {
     base: string;
     selected: string;
   };
+  primary: string;
 }
 
 export const theme: Theme = {
@@ -20,6 +21,7 @@ export const theme: Theme = {
     base: "#ffffff",
     selected: "#FF8258",
   },
+  primary: "#F15D67",
 };
 
 export const ThemeContext = createContext<Theme>(theme);

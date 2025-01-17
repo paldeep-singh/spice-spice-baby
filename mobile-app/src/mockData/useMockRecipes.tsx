@@ -1,14 +1,19 @@
 import { useEffect, useState } from "react";
 import jsonData from "./data.json"; // Import the JSON file
 
-type RecipeList = {
+export interface RecipePreview {
   name: string;
   image: string;
   id: string;
-}[];
+}
 
-export function useMockRecipes(): { loading: boolean; data: RecipeList } {
-  const [recipes, setRecipes] = useState<RecipeList>([]);
+type RecipePreviewList = RecipePreview[];
+
+export function useMockRecipes(): {
+  loading: boolean;
+  data: RecipePreviewList;
+} {
+  const [recipes, setRecipes] = useState<RecipePreviewList>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
