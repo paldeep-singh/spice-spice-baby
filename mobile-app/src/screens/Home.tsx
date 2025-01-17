@@ -4,35 +4,35 @@ import {
   TextStyle,
   ViewStyle,
   ActivityIndicator,
+  FlatList,
+  ListRenderItem,
 } from "react-native";
 import { theme } from "../utils/theme";
-import { useMockRecipes } from "../mockData/useMockRecipes";
+import { RecipePreview, useMockRecipes } from "../mockData/useMockRecipes";
 import { RecipeCard } from "../components/RecipeCard";
-import { MasonryFlashList } from "@shopify/flash-list";
 
 export function HomeScreen(): JSX.Element {
   const { loading, data } = useMockRecipes();
+
+  const renderItem: ListRenderItem<RecipePreview> = ({ item }) => (
+    <View style={styles.cardContainer}>
+      <RecipeCard {...item} />
+    </View>
+  );
 
   return (
     <View style={styles.container}>
       {loading ? (
         <ActivityIndicator />
       ) : (
-        <View style={{ width: "100%", height: "100%" }}>
-          <MasonryFlashList
+        <View style={styles.ListContainer}>
+          <FlatList
             data={data}
-            renderItem={({ item }) => <RecipeCard {...item} />}
+            renderItem={renderItem}
             keyExtractor={({ id }) => id}
             numColumns={2}
-            estimatedItemSize={166}
           />
         </View>
-        // <FlatList
-        //   data={data}
-        //   renderItem={({ item }) => <RecipeCard {...item} />}
-        //   keyExtractor={({ id }) => id}
-        //   numColumns={2}
-        // />
       )}
     </View>
   );
@@ -48,8 +48,10 @@ const styles = StyleSheet.create({
   text: {
     color: theme.text.base,
   } satisfies TextStyle,
-  row: {
-    flex: 1,
-    justifyContent: "space-around",
-  } satisfies ViewStyle,
+
+  cardContainer: { padding: 8, flex: 1 },
+  ListContainer: {
+    width: "100%",
+    height: "100%",
+  },
 });
