@@ -8,6 +8,7 @@ interface Theme {
   text: {
     base: string;
     selected: string;
+    border: string;
   };
   border: string;
 }
@@ -20,8 +21,9 @@ export const theme: Theme = {
   text: {
     base: "#ffffff",
     selected: "#FF8258",
+    border: "#000000",
   },
-  border: "#F15D67",
+  border: "#F57079",
 };
 
 export const ThemeContext = createContext<Theme>(theme);
