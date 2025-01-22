@@ -7,6 +7,11 @@
 
 ## Feature Plans/Ideas
 
+### Add recipe
+
+- Users should be able to add their own recipes, including tags/ingredients etc
+- Should have some sort of fuzzy matching to keep user input consistent with db structure? LLM?
+
 ### Inventory Management 📋
 
 - Users can add what's in their kitchen
