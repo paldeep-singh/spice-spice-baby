@@ -1,0 +1,102 @@
+categoryName,tagName
+dish name,lasagna
+dish type,breakfast
+cuisine,italian
+dietary requirement,vegan
+cooking method,oven baked
+equipment,wok
+flavour,spicy
+spice,fennel
+dish name,alfredo
+dish type,main dish
+cuisine,japanese
+dietary requirement,vegetarian
+cooking method,pan fry
+equipment,oven
+flavour,spices
+spice,pepper
+dish name,alfredo
+dish type,dessert
+cuisine,asian
+dietary requirement,pescatarian
+cooking method,frying
+flavour,sweet
+spice,cinnamon sticks
+dish name,pizza
+dish type,side dish
+cuisine,indian
+dietary requirement,dairy free
+cooking method,breading
+flavour,sweet and sour 
+spice,cardamom
+dish name,alfredo
+cuisine,thai
+dietary requirement,nuts
+spice,cloves
+dish name,pizza
+cuisine,mexican
+dietary requirement,peanuts
+cooking method,stir fry
+spice,garam masala
+dish name,bolognese
+cuisine,french
+dietary requirement,dairy-free
+cooking method,braising
+spice,chilli powder
+dish name,risotto
+cuisine,british
+dietary requirement,dairy
+cooking method,baking
+spice,paprika
+dish name,risotto
+dietary requirement,gluten free
+spice,turmeric
+dish name,carbonara
+dietary requirement,keto
+spice,cumin seeds
+dish name,arrabiata
+spice,mustard seeds
+dish name,teriyaki
+spice,curry powder
+dish name,teriyaki
+dish name,tonkatsu
+dish name,chicken karaage
+dish name,yaki udon
+dish name,curry
+dish name,curry
+dish name,dal fry
+dish name,dal
+dish name,dal
+dish name,tandoori
+dish name,tandoori
+dish name,matar paneer
+dish name,lamb roganjosh
+dish name,pad see ew
+dish name,thai green curry
+dish name,massaman beef curry
+dish name,kung pao chicken
+dish name,dumplings
+dish name,wontons
+dish name,honey balsamic chicken
+dish name,soup
+dish name,soup
+dish name,sweet and sour
+dish name,sweet and sour pork
+dish name,congee
+dish name,congee
+dish name,tacos
+dish name,tacos
+dish name,fajitas
+dish name,fajitas
+dish name,casserole
+dish name,casserole
+dish name,tacos
+dish name,tacos
+dish name,braised beef chilli
+dish name,macaroni
+dish name,sandwich
+dish name,burgers
+dish name,big mac
+dish name,pancakes
+dish name,ratatouille
+dish name,omelette
