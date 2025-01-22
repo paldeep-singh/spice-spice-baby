@@ -27,11 +27,6 @@ export function App(): JSX.Element {
                 tabBarActiveTintColor: theme.text.selected,
                 animation: "shift",
               }}
-              screenLayout={({ children }) => (
-                <SafeAreaView style={styles.safeContainer}>
-                  {children}
-                </SafeAreaView>
-              )}
             >
               <Tab.Screen
                 name="Home"
