@@ -7,7 +7,7 @@
 
 ## Feature Plans/Ideas
 
-### Add recipe
+### Add recipe ➕
 
 - Users should be able to add their own recipes, including tags/ingredients etc
 - Should have some sort of fuzzy matching to keep user input consistent with db structure? LLM?
@@ -33,7 +33,7 @@
   - Ingredients used
   - Time commitment?
 
-### Food Network
+### Food Network 🕸️
 
 - Add friends
 - Share recipes
