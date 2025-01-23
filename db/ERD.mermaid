@@ -1,0 +1,76 @@
+---
+title: SSB DB
+---
+erDiagram
+    RECIPE {
+        uuid id PK
+        string name
+        string[] steps
+        string image
+    }
+    INGREDIENT {
+        uuid id PK
+        name string
+    }
+    TAG {
+        uuid id PK
+        string name
+    }
+    TAG_CATEGORY{
+        uuid id PK
+        string name
+    }
+    INGREDIENT_CATEGORY {
+        uuid id PK
+        string name
+    }
+    PREPARATION {
+        uuid id PK
+        string name
+    }
+    EQUIPMENT {
+        uuid id PK
+        string name
+    }
+    EQUIPMENT_CATEGORY {
+        uuid id PK
+        string name
+    }
+    %% USER {
+    %%     uuid id PK
+    %%     string email
+    %%     string passwordHash
+    %% }
+    RECIPE_INGREDIENT {
+        uuid recipe_id PK, FK
+        uuid ingredient_id PK, FK
+        uuid preparation_id PK, FK
+        integer amount_numerator
+        integer amount_denominator
+        string units
+    }
+    INGREDIENT_PREPARATION {
+        uuid ingredient_id PK, FK
+        uuid preparation_id PK, FK
+        string image
+    }
+    RECIPE_TAG {
+        uuid recipe_id PK, FK
+        uuid tag_id PK, FK
+    }
+    RECIPE_EQUIPMENT {
+        uuid recipe_id PK, FK
+        uuid equipment_id PK, FK
+    }
+    RECIPE ||--|{ RECIPE_INGREDIENT : contains
+    INGREDIENT ||--o{ RECIPE_INGREDIENT : used_as
+    INGREDIENT ||--o{ INGREDIENT_PREPARATION : can_be
+    RECIPE_INGREDIENT }|--|| INGREDIENT_PREPARATION : prepared_as
+    PREPARATION ||--|{ INGREDIENT_PREPARATION : applied_to
+    RECIPE ||--|{ RECIPE_TAG : has
+    TAG ||--|{ RECIPE_TAG : applies_to
+    TAG }|--|| TAG_CATEGORY: belongs_to
+    INGREDIENT }|--|| INGREDIENT_CATEGORY : belongs_to
+    EQUIPMENT }|..o| EQUIPMENT_CATEGORY : belongs_to
+    RECIPE ||--|{ RECIPE_EQUIPMENT : uses
+    
