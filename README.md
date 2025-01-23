@@ -11,6 +11,7 @@
 
 - Users should be able to add their own recipes, including tags/ingredients etc
 - Should have some sort of fuzzy matching to keep user input consistent with db structure? LLM?
+- Users should be able to save their own
 
 ### Inventory Management 📋
 
@@ -31,3 +32,9 @@
   - Taste profile
   - Ingredients used
   - Time commitment?
+
+### Food Network
+
+- Add friends
+- Share recipes
+- Neo4j-like explorable graph map of friends and food
