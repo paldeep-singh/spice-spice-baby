@@ -1,10 +1,13 @@
 import { View, Text, StyleSheet, ViewStyle, TextStyle } from "react-native";
 import { theme } from "../utils/theme";
+import { BottomTabScreenProps } from "../navigation/types";
 
-export function SearchScreen(): JSX.Element {
+export function PlaceholderScreen({
+  route,
+}: BottomTabScreenProps): JSX.Element {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Spice Spice Baby Search Screen</Text>
+      <Text style={styles.text}>Spice Spice Baby {route.name} Screen</Text>
     </View>
   );
 }

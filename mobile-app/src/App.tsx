@@ -2,9 +2,9 @@ import { StatusBar } from "expo-status-bar";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import { theme, ThemeContext } from "./utils/theme";
-import { HomeScreen } from "./screens/Home";
-import { SearchScreen } from "./screens/Search";
-import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import { DiscoverScreen } from "./screens/Home";
+import { PlaceholderScreen } from "./screens/Placeholder";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { BottomTabParamList } from "./navigation/types";
@@ -30,7 +30,7 @@ export function App(): JSX.Element {
             >
               <Tab.Screen
                 name="Home"
-                component={HomeScreen}
+                component={PlaceholderScreen}
                 options={{
                   tabBarIcon: ({ focused }) => (
                     <Ionicons
@@ -42,12 +42,25 @@ export function App(): JSX.Element {
                 }}
               />
               <Tab.Screen
-                name="Search"
-                component={SearchScreen}
+                name="Meal Plan"
+                component={PlaceholderScreen}
                 options={{
                   tabBarIcon: ({ focused }) => (
                     <Ionicons
-                      name={focused ? "search" : "search-outline"}
+                      name={focused ? "clipboard" : "clipboard-outline"}
+                      color={focused ? theme.text.selected : theme.text.base}
+                      size={16}
+                    />
+                  ),
+                }}
+              />
+              <Tab.Screen
+                name="Discover"
+                component={DiscoverScreen}
+                options={{
+                  tabBarIcon: ({ focused }) => (
+                    <Ionicons
+                      name={focused ? "diamond" : "diamond-outline"}
                       color={focused ? theme.text.selected : theme.text.base}
                       size={16}
                     />

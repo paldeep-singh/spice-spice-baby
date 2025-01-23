@@ -3,7 +3,8 @@ import { ParamListBase } from "@react-navigation/native";
 
 export interface BottomTabParamList extends ParamListBase {
   Home: undefined;
-  Search: undefined;
+  Planner: undefined;
+  Discover: undefined;
 }
 
 type Screen = keyof BottomTabParamList;

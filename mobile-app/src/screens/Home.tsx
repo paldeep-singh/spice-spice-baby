@@ -11,7 +11,7 @@ import { theme } from "../utils/theme";
 import { RecipePreview, useMockRecipes } from "../mockData/useMockRecipes";
 import { RecipeCard } from "../components/RecipeCard";
 
-export function HomeScreen(): JSX.Element {
+export function DiscoverScreen(): JSX.Element {
   const { loading, data } = useMockRecipes();
 
   const renderItem: ListRenderItem<RecipePreview> = ({ item }) => (
