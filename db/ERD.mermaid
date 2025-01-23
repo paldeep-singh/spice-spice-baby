@@ -73,4 +73,5 @@ erDiagram
     INGREDIENT }|--|| INGREDIENT_CATEGORY : belongs_to
     EQUIPMENT }|..o| EQUIPMENT_CATEGORY : belongs_to
     RECIPE ||--|{ RECIPE_EQUIPMENT : uses
+    EQUIPMENT ||--|{ RECIPE_EQUIPMENT : used_for
     
