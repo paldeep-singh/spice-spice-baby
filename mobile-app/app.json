@@ -13,13 +13,15 @@
       "backgroundColor": "#22262E"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.anonymous.spicespicebaby"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#22262E"
-      }
+      },
+      "package": "com.anonymous.spicespicebaby"
     },
     "web": {
       "favicon": "./assets/favicon.png"
