@@ -5,6 +5,15 @@
 - API Server written in Go
 - Mobile app written in Typescript
 
+## MVP
+
+- User inventory
+  - Including image recognition
+- Meal scheduler
+  - At least for 1 week to start
+- Add recipes
+  - requires auth (?)
+
 ## Feature Plans/Ideas
 
 ### Add recipe ➕
