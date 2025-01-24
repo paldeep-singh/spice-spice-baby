@@ -9,6 +9,7 @@ import { GestureHandlerRootView } from "react-native-gesture-handler";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { BottomTabParamList } from "./navigation/types";
 import { StyleSheet, ViewStyle } from "react-native";
+import { Camera } from "./components/Camera";
 
 const Tab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -61,6 +62,19 @@ export function App(): JSX.Element {
                   tabBarIcon: ({ focused }) => (
                     <Ionicons
                       name={focused ? "diamond" : "diamond-outline"}
+                      color={focused ? theme.text.selected : theme.text.base}
+                      size={16}
+                    />
+                  ),
+                }}
+              />
+              <Tab.Screen
+                name="Camera"
+                component={Camera}
+                options={{
+                  tabBarIcon: ({ focused }) => (
+                    <Ionicons
+                      name={focused ? "camera" : "camera-outline"}
                       color={focused ? theme.text.selected : theme.text.base}
                       size={16}
                     />

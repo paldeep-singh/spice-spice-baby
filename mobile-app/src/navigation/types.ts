@@ -5,6 +5,7 @@ export interface BottomTabParamList extends ParamListBase {
   Home: undefined;
   Planner: undefined;
   Discover: undefined;
+  Camera: undefined;
 }
 
 type Screen = keyof BottomTabParamList;
