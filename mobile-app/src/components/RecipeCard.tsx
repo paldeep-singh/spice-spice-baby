@@ -30,7 +30,12 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     backgroundColor: theme.border,
   },
-  image: { aspectRatio: 0.85, width: "100%", borderRadius: 20 },
+  image: {
+    aspectRatio: 0.85,
+    width: "100%",
+    borderRadius: 20,
+    backgroundColor: theme.background.base,
+  },
   loading: { position: "absolute" },
   text: {
     color: theme.text.border,
