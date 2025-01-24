@@ -42,7 +42,7 @@ export function App(): JSX.Element {
                 }}
               />
               <Tab.Screen
-                name="Meal Plan"
+                name="Planner"
                 component={PlaceholderScreen}
                 options={{
                   tabBarIcon: ({ focused }) => (
