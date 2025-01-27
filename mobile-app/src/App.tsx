@@ -63,18 +63,3 @@ export function App(): JSX.Element {
     </GestureHandlerRootView>
   );
 }
-
-const styles = StyleSheet.create({
-  safeContainer: {
-    backgroundColor: theme.background.base,
-    flex: 1,
-  } satisfies ViewStyle,
-  tabHeader: {
-    backgroundColor: theme.background.base,
-  } satisfies ViewStyle,
-  tabHeaderTitle: { color: theme.text.base },
-  tabBar: {
-    backgroundColor: theme.background.light,
-    borderTopColor: theme.background.light,
-  },
-});
