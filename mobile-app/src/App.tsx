@@ -38,7 +38,8 @@ export function App(): JSX.Element {
                 name="Planner"
                 component={PlaceholderScreen}
                 options={{
-                  tabBarIcon: ({ focused }) => getTabBarIcon("list", focused),
+                  tabBarIcon: ({ focused }) =>
+                    getTabBarIcon("planner", focused),
                 }}
               />
               <Tab.Screen
@@ -46,7 +47,7 @@ export function App(): JSX.Element {
                 component={DiscoverScreen}
                 options={{
                   tabBarIcon: ({ focused }) =>
-                    getTabBarIcon("diamond", focused),
+                    getTabBarIcon("discover", focused),
                 }}
               />
               <Tab.Screen
