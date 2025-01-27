@@ -10,9 +10,13 @@ import {
 import { theme } from "../utils/theme";
 import { RecipePreview, useMockRecipes } from "../mockData/useMockRecipes";
 import { RecipeCard } from "../components/RecipeCard";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { useBottomTabBarHeight } from "react-native-bottom-tabs";
 
 export function DiscoverScreen(): JSX.Element {
   const { loading, data } = useMockRecipes();
+
+  const bottomTabBarHeight = useBottomTabBarHeight();
 
   const renderItem: ListRenderItem<RecipePreview> = ({ item }) => (
     <View style={styles.cardContainer}>
@@ -21,7 +25,9 @@ export function DiscoverScreen(): JSX.Element {
   );
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView
+      style={[styles.container, { paddingBottom: bottomTabBarHeight }]}
+    >
       {loading ? (
         <ActivityIndicator />
       ) : (
@@ -34,7 +40,7 @@ export function DiscoverScreen(): JSX.Element {
           />
         </View>
       )}
-    </View>
+    </SafeAreaView>
   );
 }
 

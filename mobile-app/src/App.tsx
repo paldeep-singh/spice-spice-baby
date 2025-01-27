@@ -2,7 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import { createNativeBottomTabNavigator } from "@bottom-tabs/react-navigation";
 import { NavigationContainer } from "@react-navigation/native";
 import { theme, ThemeContext } from "./utils/theme";
-import { DiscoverScreen } from "./screens/Home";
+import { DiscoverScreen } from "./screens/Discover";
 import { PlaceholderScreen } from "./screens/Placeholder";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
