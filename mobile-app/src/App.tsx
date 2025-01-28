@@ -7,7 +7,6 @@ import { PlaceholderScreen } from "./screens/Placeholder";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { BottomTabParamList } from "./navigation/types";
-import { StyleSheet, ViewStyle } from "react-native";
 import { Camera } from "./components/Camera";
 import { getTabBarIcon } from "./utils/getTabBarIcon";
 
