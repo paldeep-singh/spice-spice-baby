@@ -9,6 +9,7 @@ import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { BottomTabParamList } from "./navigation/types";
 import { Camera } from "./components/Camera";
 import { getTabBarIcon } from "./utils/getTabBarIcon";
+import { InventoryScreen } from "./screens/Inventory";
 
 const Tab = createNativeBottomTabNavigator<BottomTabParamList>();
 
@@ -35,7 +36,7 @@ export function App(): JSX.Element {
               />
               <Tab.Screen
                 name="Inventory"
-                component={PlaceholderScreen}
+                component={InventoryScreen}
                 options={{
                   tabBarIcon: ({ focused }) =>
                     getTabBarIcon("inventory", focused),
