@@ -8,7 +8,7 @@ import HomeOutline from "@assets/tab-bar-icons/home-outline.png";
 import Home from "@assets/tab-bar-icons/home.png";
 import { ImageSourcePropType } from "react-native";
 
-type TabBarIconName = "home" | "camera" | "discover" | "planner";
+type TabBarIconName = "home" | "camera" | "discover" | "inventory";
 
 export function getTabBarIcon(
   name: TabBarIconName,
@@ -21,7 +21,7 @@ export function getTabBarIcon(
       return focused ? Diamond : DiamondOutline;
     case "home":
       return focused ? Home : HomeOutline;
-    case "planner":
+    case "inventory":
       return focused ? Clipboard : ClipboardOutline;
   }
 }

@@ -34,11 +34,11 @@ export function App(): JSX.Element {
                 }}
               />
               <Tab.Screen
-                name="Planner"
+                name="Inventory"
                 component={PlaceholderScreen}
                 options={{
                   tabBarIcon: ({ focused }) =>
-                    getTabBarIcon("planner", focused),
+                    getTabBarIcon("inventory", focused),
                 }}
               />
               <Tab.Screen
