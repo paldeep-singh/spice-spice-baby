@@ -50,13 +50,13 @@ export function App(): JSX.Element {
                     getTabBarIcon("discover", focused),
                 }}
               />
-              <Tab.Screen
+              {/* <Tab.Screen
                 name="Camera"
                 component={Camera}
                 options={{
                   tabBarIcon: ({ focused }) => getTabBarIcon("camera", focused),
                 }}
-              />
+              /> */}
             </Tab.Navigator>
           </SafeAreaProvider>
         </NavigationContainer>
