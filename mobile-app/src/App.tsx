@@ -7,7 +7,6 @@ import { PlaceholderScreen } from "./screens/Placeholder";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { BottomTabParamList } from "./navigation/types";
-import { Camera } from "./components/Camera";
 import { getTabBarIcon } from "./utils/getTabBarIcon";
 import { InventoryScreen } from "./screens/Inventory";
 
@@ -40,6 +39,14 @@ export function App(): JSX.Element {
                 options={{
                   tabBarIcon: ({ focused }) =>
                     getTabBarIcon("inventory", focused),
+                }}
+              />
+              <Tab.Screen
+                name="Recipes"
+                component={InventoryScreen}
+                options={{
+                  tabBarIcon: ({ focused }) =>
+                    getTabBarIcon("recipes", focused),
                 }}
               />
               <Tab.Screen

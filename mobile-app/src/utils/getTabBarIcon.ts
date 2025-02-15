@@ -6,9 +6,12 @@ import DiamondOutline from "@assets/tab-bar-icons/diamond-outline.png";
 import Diamond from "@assets/tab-bar-icons/diamond.png";
 import HomeOutline from "@assets/tab-bar-icons/home-outline.png";
 import Home from "@assets/tab-bar-icons/home.png";
+import Pizza from "@assets/tab-bar-icons/pizza.png";
+import PizzaOutline from "@assets/tab-bar-icons/pizza-outline.png";
+
 import { ImageSourcePropType } from "react-native";
 
-type TabBarIconName = "home" | "camera" | "discover" | "inventory";
+type TabBarIconName = "home" | "camera" | "discover" | "inventory" | "recipes";
 
 export function getTabBarIcon(
   name: TabBarIconName,
@@ -23,5 +26,7 @@ export function getTabBarIcon(
       return focused ? Home : HomeOutline;
     case "inventory":
       return focused ? Clipboard : ClipboardOutline;
+    case "recipes":
+      return focused ? Pizza : PizzaOutline;
   }
 }
